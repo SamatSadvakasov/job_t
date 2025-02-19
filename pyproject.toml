@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "job-t"
+version = "0.1.0"
+description = "Prep for job interview"
+authors = ["Sam Sadu <sadvakasov.samat@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+django = "^5.1.6"
+djangorestframework = "^3.15.2"
+markdown = "^3.7"
+django-filter = "^25.1"
+django-cors-headers = "^4.7.0"
+djangorestframework-simplejwt = "^5.4.0"
+uvicorn = "^0.34.0"
+python-environ = "^0.4.54"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
