@@ -1,11 +1,13 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 
-TYPE_CHOICES = (
-    ('1', 'Phone'),
-    ('2', 'Email'),
-)
+class UserProfile(models.Model):
+    TYPE_CHOICES = (
+        ('phone', 'Phone'),
+        ('email', 'Email'),
+    )
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    id_type = models.CharField(choices=TYPE_CHOICES, max_length=5)
 
-class User(AbstractUser):
-    type_id: str = models.CharField(
-        max_length=1, choices=TYPE_CHOICES, verbose_name='Type ID', default='1')
+    def __str__(self):
+        return f"{self.user.username} ({self.id_type})"
