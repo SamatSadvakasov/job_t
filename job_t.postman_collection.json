@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "95155805-2751-4c4e-907f-21a38c545db8",
+		"name": "job_t",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32013220"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"sadvakasov.samat.ru@gmail.com\",\n    \"password\":\"QAZqaz123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://job-t.onrender.com/signup/",
+					"protocol": "https",
+					"host": [
+						"job-t",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign in",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"sadvakasov.samat.kz@gmail.com\",\n    \"password\":\"QAZqaz123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://job-t.onrender.com/signin/",
+					"protocol": "https",
+					"host": [
+						"job-t",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"signin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzk1Mzg4LCJpYXQiOjE3NDAzOTUzMjgsImp0aSI6IjBhNmRhODQyNTRkNDRjZGJhYWI0NmQ3MTkxNmYyMTQ3IiwidXNlcl9pZCI6NH0.xfvCs2VjiH6bqyMqDaEzABg3HfyzgNiMAf88JkzqW7w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://job-t.onrender.com/info/",
+					"protocol": "https",
+					"host": [
+						"job-t",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"info",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "latency",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzk1NDM1LCJpYXQiOjE3NDAzOTUzNzUsImp0aSI6IjdjN2JlMzU5ZTE0MTRjYTlhN2MwZmRkOWFmYzE3OWQwIiwidXNlcl9pZCI6NH0.IVyCmLu1rFkJKg__x-wgG5bMY5ojbMdPHzkAGsNZVmE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://job-t.onrender.com/latency/",
+					"protocol": "https",
+					"host": [
+						"job-t",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"latency",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzk1NDM1LCJpYXQiOjE3NDAzOTUzNzUsImp0aSI6IjdjN2JlMzU5ZTE0MTRjYTlhN2MwZmRkOWFmYzE3OWQwIiwidXNlcl9pZCI6NH0.IVyCmLu1rFkJKg__x-wgG5bMY5ojbMdPHzkAGsNZVmE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"all\": true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://job-t.onrender.com/logout/",
+					"protocol": "https",
+					"host": [
+						"job-t",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
