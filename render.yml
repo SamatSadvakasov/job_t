@@ -1,0 +1,6 @@
+services:
+  - type: web
+    plan: free
+    name: job_t
+    runtime: python
+    startCommand: "python -m uvicorn job_t.asgi:application --host 0.0.0.0 --port 10000 -k uvicorn.workers.UvicornWorker"
